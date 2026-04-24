@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rinesh Rijal Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to top, #2c3e50, #4ca1af);
+  color: #fff;
+  scroll-behavior: smooth;
+}
+header {
+  text-align: center;
+  padding: 40px 20px;
+}
+nav a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+.card p {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Better looking travel cards */
+#travel .card {
+  overflow: hidden;
+  padding: 0;
+}
+
+#travel .card img {
+  border-radius: 10px 10px 0 0;
+}
+
+#travel .card p {
+  padding: 10px;
+  font-weight: 500;
+}
+footer {
+  text-align: center;
+  padding: 30px;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+button {
+  padding: 10px 20px;
+  background: #4ca1af;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Rinesh Rijal</h1>
+  <p>Tourism & Hospitality Professional</p>
+  <p>📧 rijalrinesh32@gmail.com | 📞 +977-9762611569</p>
+  <p>
+    <a href="https://www.linkedin.com/in/rinesh-rijal-613656367">LinkedIn</a> |
+    <a href="https://www.instagram.com/420_packer">Instagram</a>
+  </p>
+  <nav>
+    <a href="#education">Education</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#experience">Experience</a>
+    <a href="#travel">Travel</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="education">
+  <h2>Education</h2>
+  <div class="card">
+    <h3>Bachelor in Travel & Tourism Management</h3>
+    <p>Currently pursuing BTTM at Nepal Academy of Tourism and Hotel Management (NATHM), focusing on tourism operations, hospitality management, and practical field training in trekking and service industry.</p>
+  </div>
+</section>
+
+<section id="certificates">
+  <h2>Certificates</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Trekking Guide License</h3>
+      <p>Certified professional trekking guide with practical field experience across multiple Himalayan trekking routes in Nepal, ensuring safety, navigation, and client management.</p>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Work Experience</h2>
+  <div class="card">
+    <h3>Skydeck Hotel</h3>
+    <p>Worked at the front desk where I managed guest check-in and check-out, handled customer inquiries, and ensured smooth front office operations. I focused on providing excellent customer service and creating a positive experience for guests.</p>
+  </div>
+  <div class="card">
+    <h3>Freelance Ad Creator</h3>
+    <p>Creating digital advertisements for small businesses and local vendors, helping them improve their online presence and attract more customers through creative and engaging content.</p>
+  </div>
+</section>
+
+<section id="travel">
+  <h2>Places Visited</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?mountain" alt="">
+      <p>Langtang Trek</p>
+    </div>
+    <div class="card">
+      <img src="https://source.unsplash.com/400x300/?hiking" alt="">
+      <p>Gosaikunda Trek</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form onsubmit="sendEmail(event)">
+    <textarea id="msg" placeholder="Write your message here..." required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <script>
+    function sendEmail(e) {
+      e.preventDefault();
+      var message = document.getElementById('msg').value;
+      window.location.href = `mailto:rijalrinesh32@gmail.com?body=${encodeURIComponent(message)}`;
+    }
+  </script>
+</section>
+
+<footer>
+  <p>© 2026 Rinesh Rijal</p>
+</footer>
+
+</body>
+</html>
